@@ -1,0 +1,572 @@
+@prefix : <https://w3id.org/wfont#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/wfont> .
+
+<https://w3id.org/wfont> rdf:type owl:Ontology ;
+                          owl:imports <https://w3id.org/eep> ;
+                          <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc/4.0/> ;
+                          <http://purl.org/dc/terms/contributor> """Gonzalo Gil <mailto:gonzalo.gil@tekniker.es>
+Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
+                          <http://purl.org/dc/terms/created> "2021-10-05"^^xsd:string ;
+                          <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>"@tekniker.es> ;
+                          <http://purl.org/dc/terms/description> "The Wind Farm Ontology (wfont) describes wind farms and their components. It is inspired by the SANDIA Report SAND2009-1171 and DAEKIN project outcomes. It reuses the AffectedBy and EEP (Execution-Executor-Procedure) ontology design patterns to discover sensors or actuators that observe or act on a given quality or feature of interest."@en ;
+                          <http://purl.org/dc/terms/title> "Wind Farm Ontology (wfont)"^^xsd:string ;
+                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "wfont"^^xsd:string ;
+                          <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
+                          owl:versionInfo 0.1 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/wfont#hasIndicator
+:hasIndicator rdf:type owl:ObjectProperty ;
+              rdfs:range :Indicator ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "hasIndicator"@en ,
+                         "tieneIndicador"@es .
+
+
+###  https://w3id.org/wfont#hasPart
+:hasPart rdf:type owl:ObjectProperty ;
+         rdfs:isDefinedBy : ;
+         rdfs:label "hasPart"@en ,
+                    "tieneParte"@es .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://w3id.org/affectedBy#Quality
+<https://w3id.org/affectedBy#Quality> rdf:type owl:Class .
+
+
+###  https://w3id.org/eep#Executor
+<https://w3id.org/eep#Executor> rdf:type owl:Class .
+
+
+###  https://w3id.org/wfont#AbrasiveWear
+:AbrasiveWear rdf:type owl:Class ;
+              rdfs:subClassOf :Indicator ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "Abrasive Wear"@en ;
+              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#AdhesiveWear
+:AdhesiveWear rdf:type owl:Class ;
+              rdfs:subClassOf :Indicator ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "Adhesive Wear"@en ;
+              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#AirContent
+:AirContent rdf:type owl:Class ;
+            rdfs:subClassOf :Indicator ;
+            rdfs:isDefinedBy : ;
+            rdfs:label "Air Content"@en ;
+            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#BigBubbles
+:BigBubbles rdf:type owl:Class ;
+            rdfs:subClassOf :Bubbles .
+
+
+###  https://w3id.org/wfont#BigParticles
+:BigParticles rdf:type owl:Class ;
+              rdfs:subClassOf :Particles .
+
+
+###  https://w3id.org/wfont#Bubbles
+:Bubbles rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+
+
+###  https://w3id.org/wfont#Bushing
+:Bushing rdf:type owl:Class ;
+         rdfs:subClassOf :GearboxTorqueArmSystem ;
+         rdfs:isDefinedBy : ;
+         rdfs:label "Buje"@es ,
+                    "Bushing"@en ;
+         rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#CarrierBearing
+:CarrierBearing rdf:type owl:Class ;
+                rdfs:subClassOf :GearboxBearing ;
+                rdfs:isDefinedBy : ;
+                rdfs:label "Carrier Bearing"@en ,
+                           "Rodamiento Portador"@es ;
+                rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#CleanlinessLevel
+:CleanlinessLevel rdf:type owl:Class ;
+                  rdfs:subClassOf :Indicator ;
+                  rdfs:isDefinedBy : ;
+                  rdfs:label "Cleanliness Level"@en ;
+                  <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#CoolantPump
+:CoolantPump rdf:type owl:Class ;
+             rdfs:subClassOf :CoolingSystem ;
+             rdfs:isDefinedBy : ;
+             rdfs:label "Bomba de Refrigerante"@es ,
+                        "Coolant Pump"@en ;
+             rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#CoolingSystem
+:CoolingSystem rdf:type owl:Class ;
+               rdfs:subClassOf :GearboxLubeSystem ;
+               rdfs:isDefinedBy : ;
+               rdfs:label "Cooling System"@en ,
+                          "Sistema de Refrigeración"@es ;
+               rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Cutting
+:Cutting rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+
+
+###  https://w3id.org/wfont#Fatigue
+:Fatigue rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+
+
+###  https://w3id.org/wfont#FatigueWear
+:FatigueWear rdf:type owl:Class ;
+             rdfs:subClassOf :Indicator ;
+             rdfs:isDefinedBy : ;
+             rdfs:label "Fatigue Wear"@en ;
+             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Fiber
+:Fiber rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+
+
+###  https://w3id.org/wfont#FibreContamination
+:FibreContamination rdf:type owl:Class ;
+                    rdfs:subClassOf :Indicator ;
+                    rdfs:isDefinedBy : ;
+                    rdfs:label "Fibre Contamination"@en ;
+                    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Gearbox
+:Gearbox rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasIndicator ;
+                           owl:someValuesFrom :Indicator
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPart ;
+                           owl:someValuesFrom :GearboxBearing
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPart ;
+                           owl:someValuesFrom :GearboxGears
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPart ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :GearboxHousing
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPart ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :GearboxLubeSystem
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPart ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :GearboxTorqueArmSystem
+                         ] ;
+         rdfs:isDefinedBy : ;
+         rdfs:label "Gearbox"@en ,
+                    "Multiplicadora"@es ;
+         rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#GearboxBearing
+:GearboxBearing rdf:type owl:Class ;
+                rdfs:subClassOf :GearboxComponent ;
+                rdfs:isDefinedBy : ;
+                rdfs:label "Bearing"@en ,
+                           "Rodamiento"@es ;
+                rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#GearboxComponent
+:GearboxComponent rdf:type owl:Class ;
+                  rdfs:isDefinedBy : ;
+                  rdfs:label "Componente de Multiplicadora"@es ,
+                             "Gearbox Component"@en ;
+                  <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#GearboxGears
+:GearboxGears rdf:type owl:Class ;
+              rdfs:subClassOf :GearboxComponent ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "Engranaje"@es ,
+                         "Gears"@en ;
+              rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#GearboxHousing
+:GearboxHousing rdf:type owl:Class ;
+                rdfs:subClassOf :GearboxComponent ;
+                rdfs:isDefinedBy : ;
+                rdfs:label "Alojamiento"@es ,
+                           "Housing"@en ;
+                rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#GearboxLubeSystem
+:GearboxLubeSystem rdf:type owl:Class ;
+                   rdfs:subClassOf :GearboxComponent ;
+                   rdfs:isDefinedBy : ;
+                   rdfs:label "Lube System"@en ,
+                              "Sistema de Lubricación"@es ;
+                   rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#GearboxTorqueArmSystem
+:GearboxTorqueArmSystem rdf:type owl:Class ;
+                        rdfs:subClassOf :GearboxComponent ;
+                        rdfs:isDefinedBy : ;
+                        rdfs:label "Sistema de Brazo de Torque"@es ,
+                                   "Torque Arm System"@en ;
+                        rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+                        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#HollowShaft
+:HollowShaft rdf:type owl:Class ;
+             rdfs:subClassOf :GearboxGears ;
+             rdfs:isDefinedBy : ;
+             rdfs:label "Eje hueco"@es ,
+                        "Hollow Shaft"@en ;
+             rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Hose-Fitting
+:Hose-Fitting rdf:type owl:Class ;
+              rdfs:subClassOf :GearboxLubeSystem ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "Hose/Fitting"@en ,
+                         "Manguera"@es ;
+              rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#ISO14
+:ISO14 rdf:type owl:Class ;
+       rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+
+
+###  https://w3id.org/wfont#ISO4
+:ISO4 rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+
+
+###  https://w3id.org/wfont#ISO6
+:ISO6 rdf:type owl:Class ;
+      rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+
+
+###  https://w3id.org/wfont#Indicator
+:Indicator rdf:type owl:Class ;
+           rdfs:isDefinedBy : ;
+           rdfs:label "Indicador"@es ,
+                      "Indicator"@en ;
+           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#LubePump
+:LubePump rdf:type owl:Class ;
+          rdfs:subClassOf :GearboxLubeSystem ;
+          rdfs:isDefinedBy : ;
+          rdfs:label "Bomba de Lubricación"@es ,
+                     "Lube Pump"@en ;
+          rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#LubePumpMotor
+:LubePumpMotor rdf:type owl:Class ;
+               rdfs:subClassOf :GearboxLubeSystem ;
+               rdfs:isDefinedBy : ;
+               rdfs:label "Lube Pump Motor"@en ,
+                          "Motor de Bomba de Lubricación"@es ;
+               rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Nacelle
+:Nacelle rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasPart ;
+                           owl:someValuesFrom :Gearbox
+                         ] ;
+         rdfs:isDefinedBy : ;
+         rdfs:label "Góndola"@es ,
+                    "Nacelle"@en ;
+         rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#OD
+:OD rdf:type owl:Class ;
+    rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+
+
+###  https://w3id.org/wfont#OilDegradation
+:OilDegradation rdf:type owl:Class ;
+                rdfs:subClassOf :Indicator ;
+                rdfs:isDefinedBy : ;
+                rdfs:label "Oil Degradation"@en ;
+                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Particles
+:Particles rdf:type owl:Class ;
+           rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+
+
+###  https://w3id.org/wfont#PlanetBearing
+:PlanetBearing rdf:type owl:Class ;
+               rdfs:subClassOf :GearboxBearing ;
+               rdfs:isDefinedBy : ;
+               rdfs:label "Planet Bearing"@en ,
+                          "Rodamiento Planetario"@es ;
+               rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#PlanetGear
+:PlanetGear rdf:type owl:Class ;
+            rdfs:subClassOf :GearboxGears ;
+            rdfs:isDefinedBy : ;
+            rdfs:label "Engranaje Planetario"@es ,
+                       "Planet Gear"@en ;
+            rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#PrimaryFiltration
+:PrimaryFiltration rdf:type owl:Class ;
+                   rdfs:subClassOf :GearboxLubeSystem ;
+                   rdfs:isDefinedBy : ;
+                   rdfs:label "Filtración Primaria"@es ,
+                              "Primary Filtration"@en ;
+                   rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Radiator
+:Radiator rdf:type owl:Class ;
+          rdfs:subClassOf :CoolingSystem ;
+          rdfs:isDefinedBy : ;
+          rdfs:label "Radiador"@es ,
+                     "Radiator"@en ;
+          rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Reservoir
+:Reservoir rdf:type owl:Class ;
+           rdfs:subClassOf :GearboxLubeSystem ;
+           rdfs:isDefinedBy : ;
+           rdfs:label "Depósito"@es ,
+                      "Reservoir"@en ;
+           rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#RingGear
+:RingGear rdf:type owl:Class ;
+          rdfs:subClassOf :GearboxGears ;
+          rdfs:isDefinedBy : ;
+          rdfs:label "Engranaje de Anillo"@es ,
+                     "Ring Gear"@en ;
+          rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#SecondaryFiltration
+:SecondaryFiltration rdf:type owl:Class ;
+                     rdfs:subClassOf :GearboxLubeSystem ;
+                     rdfs:isDefinedBy : ;
+                     rdfs:label "Filtración Secundaria"@es ,
+                                "Secondary Filtration"@en ;
+                     rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+                     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Sensor
+:Sensor rdf:type owl:Class ;
+        rdfs:subClassOf <https://w3id.org/eep#Executor> ,
+                        :GearboxLubeSystem ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty <https://w3id.org/eep#forQuality> ;
+                          owl:someValuesFrom <https://w3id.org/affectedBy#Quality>
+                        ] ;
+        rdfs:isDefinedBy : ;
+        rdfs:label "Sensor"@en ,
+                   "Sensor"@es ;
+        rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#SevereWear
+:SevereWear rdf:type owl:Class ;
+            rdfs:subClassOf :Indicator ;
+            rdfs:isDefinedBy : ;
+            rdfs:label "Severe Wear"@en ;
+            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#ShaftBearing
+:ShaftBearing rdf:type owl:Class ;
+              rdfs:subClassOf :GearboxBearing ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "Rodamiento de Eje"@es ,
+                         "Shaft Bearing"@en ;
+              rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Sliding
+:Sliding rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+
+
+###  https://w3id.org/wfont#SpurGear
+:SpurGear rdf:type owl:Class ;
+          rdfs:subClassOf :GearboxGears ;
+          rdfs:isDefinedBy : ;
+          rdfs:label "Engranaje Recto"@es ,
+                     "Spur Gear"@en ;
+          rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#SunGear
+:SunGear rdf:type owl:Class ;
+         rdfs:subClassOf :GearboxGears ;
+         rdfs:isDefinedBy : ;
+         rdfs:label "Engranaje Solar"@es ,
+                    "Sun Gear"@en ;
+         rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#UnclassifiedWear
+:UnclassifiedWear rdf:type owl:Class ;
+                  rdfs:subClassOf :Indicator ;
+                  rdfs:isDefinedBy : ;
+                  rdfs:label "Unclassified Wear"@en ;
+                  <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#WindFarm
+:WindFarm rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasPart ;
+                            owl:someValuesFrom :WindTurbine
+                          ] ;
+          rdfs:isDefinedBy : ;
+          rdfs:label "Parque Eólico"@es ,
+                     "Wind Farm"@en ;
+          rdfs:seeAlso "SAND2009-1171 Report - Appendix A: Taxonomy"^^xsd:string ;
+          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#WindTurbine
+:WindTurbine rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty :hasPart ;
+                               owl:someValuesFrom :Nacelle
+                             ] ;
+             rdfs:isDefinedBy : ;
+             rdfs:label "Aerogenerador"@es ,
+                        "Wind Turbine"@en ;
+             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/wfont#
+: rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/

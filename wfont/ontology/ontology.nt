@@ -1,0 +1,516 @@
+<https://w3id.org/wfont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/wfont> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eep> .
+<https://w3id.org/wfont> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc/4.0/> .
+<https://w3id.org/wfont> <http://purl.org/dc/terms/contributor> "Gonzalo Gil <mailto:gonzalo.gil@tekniker.es>\nFrancisco Javier Diez <mailto:francisco.diez>"@tekniker.es> .
+<https://w3id.org/wfont> <http://purl.org/dc/terms/created> "2021-10-05" .
+<https://w3id.org/wfont> <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>"@tekniker.es> .
+<https://w3id.org/wfont> <http://purl.org/dc/terms/description> "The Wind Farm Ontology (wfont) describes wind farms and their components. It is inspired by the SANDIA Report SAND2009-1171 and DAEKIN project outcomes. It reuses the AffectedBy and EEP (Execution-Executor-Procedure) ontology design patterns to discover sensors or actuators that observe or act on a given quality or feature of interest."@en .
+<https://w3id.org/wfont> <http://purl.org/dc/terms/title> "Wind Farm Ontology (wfont)" .
+<https://w3id.org/wfont> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wfont" .
+<https://w3id.org/wfont> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/wfont#hasIndicator
+<https://w3id.org/wfont#hasIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/wfont#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "hasIndicator"@en .
+<https://w3id.org/wfont#hasIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "tieneIndicador"@es .
+# 
+# https://w3id.org/wfont#hasPart
+<https://w3id.org/wfont#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/wfont#hasPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "hasPart"@en .
+<https://w3id.org/wfont#hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "tieneParte"@es .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/affectedBy#Quality
+<https://w3id.org/affectedBy#Quality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/eep#Executor
+<https://w3id.org/eep#Executor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/wfont#AbrasiveWear
+<https://w3id.org/wfont#AbrasiveWear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#AbrasiveWear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#AbrasiveWear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#AbrasiveWear> <http://www.w3.org/2000/01/rdf-schema#label> "Abrasive Wear"@en .
+<https://w3id.org/wfont#AbrasiveWear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#AdhesiveWear
+<https://w3id.org/wfont#AdhesiveWear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#AdhesiveWear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#AdhesiveWear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#AdhesiveWear> <http://www.w3.org/2000/01/rdf-schema#label> "Adhesive Wear"@en .
+<https://w3id.org/wfont#AdhesiveWear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#AirContent
+<https://w3id.org/wfont#AirContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#AirContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#AirContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#AirContent> <http://www.w3.org/2000/01/rdf-schema#label> "Air Content"@en .
+<https://w3id.org/wfont#AirContent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#BigBubbles
+<https://w3id.org/wfont#BigBubbles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#BigBubbles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Bubbles> .
+# 
+# https://w3id.org/wfont#BigParticles
+<https://w3id.org/wfont#BigParticles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#BigParticles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Particles> .
+# 
+# https://w3id.org/wfont#Bubbles
+<https://w3id.org/wfont#Bubbles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Bubbles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+# 
+# https://w3id.org/wfont#Bushing
+<https://w3id.org/wfont#Bushing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Bushing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxTorqueArmSystem> .
+<https://w3id.org/wfont#Bushing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Bushing> <http://www.w3.org/2000/01/rdf-schema#label> "Buje"@es .
+<https://w3id.org/wfont#Bushing> <http://www.w3.org/2000/01/rdf-schema#label> "Bushing"@en .
+<https://w3id.org/wfont#Bushing> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#Bushing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#CarrierBearing
+<https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxBearing> .
+<https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Carrier Bearing"@en .
+<https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Rodamiento Portador"@es .
+<https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#CleanlinessLevel
+<https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Cleanliness Level"@en .
+<https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#CoolantPump
+<https://w3id.org/wfont#CoolantPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#CoolingSystem> .
+<https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2000/01/rdf-schema#label> "Bomba de Refrigerante"@es .
+<https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2000/01/rdf-schema#label> "Coolant Pump"@en .
+<https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#CoolingSystem
+<https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Cooling System"@en .
+<https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Sistema de Refrigeraci\u00F3n"@es .
+<https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Cutting
+<https://w3id.org/wfont#Cutting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Cutting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+# 
+# https://w3id.org/wfont#Fatigue
+<https://w3id.org/wfont#Fatigue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Fatigue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+# 
+# https://w3id.org/wfont#FatigueWear
+<https://w3id.org/wfont#FatigueWear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#FatigueWear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#FatigueWear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#FatigueWear> <http://www.w3.org/2000/01/rdf-schema#label> "Fatigue Wear"@en .
+<https://w3id.org/wfont#FatigueWear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Fiber
+<https://w3id.org/wfont#Fiber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Fiber> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+# 
+# https://w3id.org/wfont#FibreContamination
+<https://w3id.org/wfont#FibreContamination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#FibreContamination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#FibreContamination> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#FibreContamination> <http://www.w3.org/2000/01/rdf-schema#label> "Fibre Contamination"@en .
+<https://w3id.org/wfont#FibreContamination> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Gearbox
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasIndicator> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#GearboxBearing> .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#GearboxHousing> .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#GearboxTorqueArmSystem> .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#label> "Gearbox"@en .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#label> "Multiplicadora"@es .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#GearboxBearing
+<https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxComponent> .
+<https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Bearing"@en .
+<https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Rodamiento"@es .
+<https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#GearboxComponent
+<https://w3id.org/wfont#GearboxComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#GearboxComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#GearboxComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de Multiplicadora"@es .
+<https://w3id.org/wfont#GearboxComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Gearbox Component"@en .
+<https://w3id.org/wfont#GearboxComponent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#GearboxGears
+<https://w3id.org/wfont#GearboxGears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxComponent> .
+<https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2000/01/rdf-schema#label> "Engranaje"@es .
+<https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2000/01/rdf-schema#label> "Gears"@en .
+<https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#GearboxHousing
+<https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxComponent> .
+<https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2000/01/rdf-schema#label> "Alojamiento"@es .
+<https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2000/01/rdf-schema#label> "Housing"@en .
+<https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#GearboxLubeSystem
+<https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxComponent> .
+<https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Lube System"@en .
+<https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Sistema de Lubricaci\u00F3n"@es .
+<https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#GearboxTorqueArmSystem
+<https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxComponent> .
+<https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Sistema de Brazo de Torque"@es .
+<https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Torque Arm System"@en .
+<https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#HollowShaft
+<https://w3id.org/wfont#HollowShaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2000/01/rdf-schema#label> "Eje hueco"@es .
+<https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2000/01/rdf-schema#label> "Hollow Shaft"@en .
+<https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Hose-Fitting
+<https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2000/01/rdf-schema#label> "Hose/Fitting"@en .
+<https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2000/01/rdf-schema#label> "Manguera"@es .
+<https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#ISO14
+<https://w3id.org/wfont#ISO14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#ISO14> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+# 
+# https://w3id.org/wfont#ISO4
+<https://w3id.org/wfont#ISO4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#ISO4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+# 
+# https://w3id.org/wfont#ISO6
+<https://w3id.org/wfont#ISO6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#ISO6> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+# 
+# https://w3id.org/wfont#Indicator
+<https://w3id.org/wfont#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Indicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Indicator> <http://www.w3.org/2000/01/rdf-schema#label> "Indicador"@es .
+<https://w3id.org/wfont#Indicator> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator"@en .
+<https://w3id.org/wfont#Indicator> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#LubePump
+<https://w3id.org/wfont#LubePump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#LubePump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#LubePump> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#LubePump> <http://www.w3.org/2000/01/rdf-schema#label> "Bomba de Lubricaci\u00F3n"@es .
+<https://w3id.org/wfont#LubePump> <http://www.w3.org/2000/01/rdf-schema#label> "Lube Pump"@en .
+<https://w3id.org/wfont#LubePump> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#LubePump> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#LubePumpMotor
+<https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2000/01/rdf-schema#label> "Lube Pump Motor"@en .
+<https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2000/01/rdf-schema#label> "Motor de Bomba de Lubricaci\u00F3n"@es .
+<https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Nacelle
+<https://w3id.org/wfont#Nacelle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Nacelle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#Gearbox> .
+<https://w3id.org/wfont#Nacelle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Nacelle> <http://www.w3.org/2000/01/rdf-schema#label> "G\u00F3ndola"@es .
+<https://w3id.org/wfont#Nacelle> <http://www.w3.org/2000/01/rdf-schema#label> "Nacelle"@en .
+<https://w3id.org/wfont#Nacelle> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#Nacelle> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#OD
+<https://w3id.org/wfont#OD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#OD> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+# 
+# https://w3id.org/wfont#OilDegradation
+<https://w3id.org/wfont#OilDegradation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#OilDegradation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#OilDegradation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#OilDegradation> <http://www.w3.org/2000/01/rdf-schema#label> "Oil Degradation"@en .
+<https://w3id.org/wfont#OilDegradation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Particles
+<https://w3id.org/wfont#Particles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Particles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+# 
+# https://w3id.org/wfont#PlanetBearing
+<https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxBearing> .
+<https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Planet Bearing"@en .
+<https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Rodamiento Planetario"@es .
+<https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#PlanetGear
+<https://w3id.org/wfont#PlanetGear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2000/01/rdf-schema#label> "Engranaje Planetario"@es .
+<https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2000/01/rdf-schema#label> "Planet Gear"@en .
+<https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#PrimaryFiltration
+<https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2000/01/rdf-schema#label> "Filtraci\u00F3n Primaria"@es .
+<https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2000/01/rdf-schema#label> "Primary Filtration"@en .
+<https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Radiator
+<https://w3id.org/wfont#Radiator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Radiator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#CoolingSystem> .
+<https://w3id.org/wfont#Radiator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Radiator> <http://www.w3.org/2000/01/rdf-schema#label> "Radiador"@es .
+<https://w3id.org/wfont#Radiator> <http://www.w3.org/2000/01/rdf-schema#label> "Radiator"@en .
+<https://w3id.org/wfont#Radiator> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#Radiator> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Reservoir
+<https://w3id.org/wfont#Reservoir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Reservoir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#Reservoir> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Reservoir> <http://www.w3.org/2000/01/rdf-schema#label> "Dep\u00F3sito"@es .
+<https://w3id.org/wfont#Reservoir> <http://www.w3.org/2000/01/rdf-schema#label> "Reservoir"@en .
+<https://w3id.org/wfont#Reservoir> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#Reservoir> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#RingGear
+<https://w3id.org/wfont#RingGear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#RingGear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#RingGear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#RingGear> <http://www.w3.org/2000/01/rdf-schema#label> "Engranaje de Anillo"@es .
+<https://w3id.org/wfont#RingGear> <http://www.w3.org/2000/01/rdf-schema#label> "Ring Gear"@en .
+<https://w3id.org/wfont#RingGear> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#RingGear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#SecondaryFiltration
+<https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2000/01/rdf-schema#label> "Filtraci\u00F3n Secundaria"@es .
+<https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2000/01/rdf-schema#label> "Secondary Filtration"@en .
+<https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Sensor
+<https://w3id.org/wfont#Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/eep#Executor> .
+<https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eep#forQuality> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
+<https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@es .
+<https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#Sensor> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#SevereWear
+<https://w3id.org/wfont#SevereWear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#SevereWear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#SevereWear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#SevereWear> <http://www.w3.org/2000/01/rdf-schema#label> "Severe Wear"@en .
+<https://w3id.org/wfont#SevereWear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#ShaftBearing
+<https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxBearing> .
+<https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Rodamiento de Eje"@es .
+<https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Shaft Bearing"@en .
+<https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Sliding
+<https://w3id.org/wfont#Sliding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Sliding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+# 
+# https://w3id.org/wfont#SpurGear
+<https://w3id.org/wfont#SpurGear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#SpurGear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#SpurGear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#SpurGear> <http://www.w3.org/2000/01/rdf-schema#label> "Engranaje Recto"@es .
+<https://w3id.org/wfont#SpurGear> <http://www.w3.org/2000/01/rdf-schema#label> "Spur Gear"@en .
+<https://w3id.org/wfont#SpurGear> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#SpurGear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#SunGear
+<https://w3id.org/wfont#SunGear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#label> "Engranaje Solar"@es .
+<https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#label> "Sun Gear"@en .
+<https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#SunGear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#UnclassifiedWear
+<https://w3id.org/wfont#UnclassifiedWear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#UnclassifiedWear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#UnclassifiedWear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#UnclassifiedWear> <http://www.w3.org/2000/01/rdf-schema#label> "Unclassified Wear"@en .
+<https://w3id.org/wfont#UnclassifiedWear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#WindFarm
+<https://w3id.org/wfont#WindFarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#WindFarm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#WindTurbine> .
+<https://w3id.org/wfont#WindFarm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#WindFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Parque E\u00F3lico"@es .
+<https://w3id.org/wfont#WindFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Wind Farm"@en .
+<https://w3id.org/wfont#WindFarm> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
+<https://w3id.org/wfont#WindFarm> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#WindTurbine
+<https://w3id.org/wfont#WindTurbine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#Nacelle> .
+<https://w3id.org/wfont#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#label> "Aerogenerador"@es .
+<https://w3id.org/wfont#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#label> "Wind Turbine"@en .
+<https://w3id.org/wfont#WindTurbine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/wfont#
+<https://w3id.org/wfont#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+# 
+# Generated by the OWL API (version 5.1.0) https://github.com/owlcs/owlapi/
