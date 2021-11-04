@@ -9,15 +9,17 @@
 <https://w3id.org/wfont> rdf:type owl:Ontology ;
                           owl:imports <https://w3id.org/eep> ;
                           <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc/4.0/> ;
-                          <http://purl.org/dc/terms/contributor> """Gonzalo Gil <mailto:gonzalo.gil@tekniker.es>
-Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
+                          <http://purl.org/dc/terms/contributor> """Francisco Javier Diez <mailto:francisco.diez>
+Gonzalo Gil <mailto:gonzalo.gil@tekniker.es>
+Egoitz Konde <mailto:egoitz.konde@tekniker.es>"""@tekniker.es> ;
                           <http://purl.org/dc/terms/created> "2021-10-05"^^xsd:string ;
                           <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>"@tekniker.es> ;
                           <http://purl.org/dc/terms/description> "The Wind Farm Ontology (wfont) describes wind farms and their components. It is inspired by the SANDIA Report SAND2009-1171 and DAEKIN project outcomes. It reuses the AffectedBy and EEP (Execution-Executor-Procedure) ontology design patterns to discover sensors or actuators that observe or act on a given quality or feature of interest."@en ;
+                          <http://purl.org/dc/terms/modified> "2021-11-04"^^xsd:string ;
                           <http://purl.org/dc/terms/title> "Wind Farm Ontology (wfont)"^^xsd:string ;
                           <http://purl.org/vocab/vann/preferredNamespacePrefix> "wfont"^^xsd:string ;
                           <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-                          owl:versionInfo 0.1 .
+                          owl:versionInfo "0.2"@tekniker.es> .
 
 #################################################################
 #    Annotation properties
@@ -94,48 +96,64 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 <https://w3id.org/eep#Executor> rdf:type owl:Class .
 
 
-###  https://w3id.org/wfont#AbrasiveWear
-:AbrasiveWear rdf:type owl:Class ;
-              rdfs:subClassOf :Indicator ;
-              rdfs:isDefinedBy : ;
-              rdfs:label "Abrasive Wear"@en ;
-              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+###  https://w3id.org/wfont#AbrasiveWearLevel
+:AbrasiveWearLevel rdf:type owl:Class ;
+                   rdfs:subClassOf :Indicator ;
+                   rdfs:comment "Indicates the warning and alarm level for having abrasive particles in the oil, it is calculated using Cutting parameter of the sensor."@en ;
+                   rdfs:isDefinedBy : ;
+                   rdfs:label "Abrasive Wear Level"@en ;
+                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
-###  https://w3id.org/wfont#AdhesiveWear
-:AdhesiveWear rdf:type owl:Class ;
-              rdfs:subClassOf :Indicator ;
-              rdfs:isDefinedBy : ;
-              rdfs:label "Adhesive Wear"@en ;
-              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+###  https://w3id.org/wfont#AdhesiveWearLevel
+:AdhesiveWearLevel rdf:type owl:Class ;
+                   rdfs:subClassOf :Indicator ;
+                   rdfs:comment "Indicates the warning and alarm level for having sliding particles in the oil, it is calculated using Sliding parameter of the sensor."@en ;
+                   rdfs:isDefinedBy : ;
+                   rdfs:label "Adhesive Wear Level"@en ;
+                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
-###  https://w3id.org/wfont#AirContent
-:AirContent rdf:type owl:Class ;
-            rdfs:subClassOf :Indicator ;
-            rdfs:isDefinedBy : ;
-            rdfs:label "Air Content"@en ;
-            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+###  https://w3id.org/wfont#AirContentLevel
+:AirContentLevel rdf:type owl:Class ;
+                 rdfs:subClassOf :Indicator ;
+                 rdfs:comment "Indicates the warning and alarm level for having bubbles in the oil, it is calculated using Bubbles parameter of the sensor."@en ;
+                 rdfs:isDefinedBy : ;
+                 rdfs:label "Air Content Level"@en ;
+                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#BigBubbles
 :BigBubbles rdf:type owl:Class ;
-            rdfs:subClassOf :Bubbles .
+            rdfs:subClassOf :Bubbles ;
+            rdfs:comment "Number of bubbles per milimiter bigger than 21 μm."@en ;
+            rdfs:isDefinedBy : ;
+            rdfs:label "Big Bubbles"@en ;
+            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#BigParticles
 :BigParticles rdf:type owl:Class ;
-              rdfs:subClassOf :Particles .
+              rdfs:subClassOf :Particles ;
+              rdfs:comment "Number of particles per milimiter bigger than 21 μm."@en ;
+              rdfs:isDefinedBy : ;
+              rdfs:label "Big Particles"@en ;
+              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#Bubbles
 :Bubbles rdf:type owl:Class ;
-         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+         rdfs:comment "Number of bubbles per milimiter."@en ;
+         rdfs:isDefinedBy : ;
+         rdfs:label "Bubbles"@en ;
+         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#Bushing
 :Bushing rdf:type owl:Class ;
          rdfs:subClassOf :GearboxTorqueArmSystem ;
+         rdfs:comment "A mechanical device used to reduce vibrations."@en ;
          rdfs:isDefinedBy : ;
          rdfs:label "Buje"@es ,
                     "Bushing"@en ;
@@ -146,6 +164,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#CarrierBearing
 :CarrierBearing rdf:type owl:Class ;
                 rdfs:subClassOf :GearboxBearing ;
+                rdfs:comment "It is the bearing that support the carrier. The carrier holds the planet gears at different radio from the sun gear centerline."@en ;
                 rdfs:isDefinedBy : ;
                 rdfs:label "Carrier Bearing"@en ,
                            "Rodamiento Portador"@es ;
@@ -156,6 +175,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#CleanlinessLevel
 :CleanlinessLevel rdf:type owl:Class ;
                   rdfs:subClassOf :Indicator ;
+                  rdfs:comment "Indicates the warning and alarm level for having particles in the oil, it is calculated using ISO4, ISO6 and ISO14 parameter of the sensor."@en ;
                   rdfs:isDefinedBy : ;
                   rdfs:label "Cleanliness Level"@en ;
                   <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
@@ -164,6 +184,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#CoolantPump
 :CoolantPump rdf:type owl:Class ;
              rdfs:subClassOf :CoolingSystem ;
+             rdfs:comment "Circulates the liquid from the cooling system."@en ;
              rdfs:isDefinedBy : ;
              rdfs:label "Bomba de Refrigerante"@es ,
                         "Coolant Pump"@en ;
@@ -174,6 +195,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#CoolingSystem
 :CoolingSystem rdf:type owl:Class ;
                rdfs:subClassOf :GearboxLubeSystem ;
+               rdfs:comment "Reduces the temperature of the oil from the lubricating system."@en ;
                rdfs:isDefinedBy : ;
                rdfs:label "Cooling System"@en ,
                           "Sistema de Refrigeración"@es ;
@@ -183,33 +205,47 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 
 ###  https://w3id.org/wfont#Cutting
 :Cutting rdf:type owl:Class ;
-         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+         rdfs:comment "Number of particles related to cutting wear per milimiter."@en ;
+         rdfs:isDefinedBy : ;
+         rdfs:label "Cutting"@en ;
+         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#Fatigue
 :Fatigue rdf:type owl:Class ;
-         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+         rdfs:comment "Number of particles related to fatigue wear per milimiter."@en ;
+         rdfs:isDefinedBy : ;
+         rdfs:label "Fatigue"@en ;
+         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
-###  https://w3id.org/wfont#FatigueWear
-:FatigueWear rdf:type owl:Class ;
-             rdfs:subClassOf :Indicator ;
-             rdfs:isDefinedBy : ;
-             rdfs:label "Fatigue Wear"@en ;
-             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+###  https://w3id.org/wfont#FatigueWearLevel
+:FatigueWearLevel rdf:type owl:Class ;
+                  rdfs:subClassOf :Indicator ;
+                  rdfs:comment "Indicates the warning and alarm level for having fatigue particles in the oil, it is calculated using Fatigue parameter of the sensor."@en ;
+                  rdfs:isDefinedBy : ;
+                  rdfs:label "Fatigue Wear Level"@en ;
+                  <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#Fiber
 :Fiber rdf:type owl:Class ;
-       rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+       rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+       rdfs:comment "Number of particles related to fiber particles per milimiter."@en ;
+       rdfs:isDefinedBy : ;
+       rdfs:label "Fiber"@en ;
+       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
-###  https://w3id.org/wfont#FibreContamination
-:FibreContamination rdf:type owl:Class ;
-                    rdfs:subClassOf :Indicator ;
-                    rdfs:isDefinedBy : ;
-                    rdfs:label "Fibre Contamination"@en ;
-                    <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+###  https://w3id.org/wfont#FibreContaminationLevel
+:FibreContaminationLevel rdf:type owl:Class ;
+                         rdfs:subClassOf :Indicator ;
+                         rdfs:comment "Indicates the warning and alarm level for having fibre particles in the oil, it is calculated using Fibre parameter of the sensor."@en ;
+                         rdfs:isDefinedBy : ;
+                         rdfs:label "Fibre Contamination Level"@en ;
+                         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#Gearbox
@@ -241,6 +277,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                            owl:onClass :GearboxTorqueArmSystem
                          ] ;
+         rdfs:comment "A set of gears with its casing, aimed at increasing or reducing speed."@en ;
          rdfs:isDefinedBy : ;
          rdfs:label "Gearbox"@en ,
                     "Multiplicadora"@es ;
@@ -251,6 +288,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#GearboxBearing
 :GearboxBearing rdf:type owl:Class ;
                 rdfs:subClassOf :GearboxComponent ;
+                rdfs:comment "Consists of rings with raceway (inner ring and outer ring), rolling elements (either balls or rollers) and cage. The cage separates the rolling elements at regular intervals, holds them in place within the inner and outer raceways, and allows them to rotate freely."@en ;
                 rdfs:isDefinedBy : ;
                 rdfs:label "Bearing"@en ,
                            "Rodamiento"@es ;
@@ -260,6 +298,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 
 ###  https://w3id.org/wfont#GearboxComponent
 :GearboxComponent rdf:type owl:Class ;
+                  rdfs:comment "Constituting part or element of a gearbox."@en ;
                   rdfs:isDefinedBy : ;
                   rdfs:label "Componente de Multiplicadora"@es ,
                              "Gearbox Component"@en ;
@@ -269,6 +308,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#GearboxGears
 :GearboxGears rdf:type owl:Class ;
               rdfs:subClassOf :GearboxComponent ;
+              rdfs:comment "It is a rotating circular machine part having teeth which mesh with another (compatible) toothed part to transmit (convert) torque and speed."@en ;
               rdfs:isDefinedBy : ;
               rdfs:label "Engranaje"@es ,
                          "Gears"@en ;
@@ -279,6 +319,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#GearboxHousing
 :GearboxHousing rdf:type owl:Class ;
                 rdfs:subClassOf :GearboxComponent ;
+                rdfs:comment "A protective casing providing a reservoir of oil or grease for the gearing."@en ;
                 rdfs:isDefinedBy : ;
                 rdfs:label "Alojamiento"@es ,
                            "Housing"@en ;
@@ -289,6 +330,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#GearboxLubeSystem
 :GearboxLubeSystem rdf:type owl:Class ;
                    rdfs:subClassOf :GearboxComponent ;
+                   rdfs:comment "It controls the shifting process of the transmission, lubrication of the transmission parts to prevent frictional damage, and cooling of the transmission. "@en ;
                    rdfs:isDefinedBy : ;
                    rdfs:label "Lube System"@en ,
                               "Sistema de Lubricación"@es ;
@@ -299,6 +341,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#GearboxTorqueArmSystem
 :GearboxTorqueArmSystem rdf:type owl:Class ;
                         rdfs:subClassOf :GearboxComponent ;
+                        rdfs:comment "It is a long suspension arm that attaches between the housing and the Nacelle. Its primary job is to control axle housing rotation."@en ;
                         rdfs:isDefinedBy : ;
                         rdfs:label "Sistema de Brazo de Torque"@es ,
                                    "Torque Arm System"@en ;
@@ -309,6 +352,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#HollowShaft
 :HollowShaft rdf:type owl:Class ;
              rdfs:subClassOf :GearboxGears ;
+             rdfs:comment "The ouput shaft of the gearbox witch has empty space inside."@en ;
              rdfs:isDefinedBy : ;
              rdfs:label "Eje hueco"@es ,
                         "Hollow Shaft"@en ;
@@ -319,6 +363,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#Hose-Fitting
 :Hose-Fitting rdf:type owl:Class ;
               rdfs:subClassOf :GearboxLubeSystem ;
+              rdfs:comment "Flexible tube and part attached to it where lube is carried."@en ;
               rdfs:isDefinedBy : ;
               rdfs:label "Hose/Fitting"@en ,
                          "Manguera"@es ;
@@ -328,21 +373,34 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 
 ###  https://w3id.org/wfont#ISO14
 :ISO14 rdf:type owl:Class ;
-       rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+       rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+       rdfs:comment "Number of particles per milimiter bigger than 14 μm. Related to ISO 4406:1999 method for coding the level of contamination by solid particles."@en ;
+       rdfs:isDefinedBy : ;
+       rdfs:label "ISO14"@en ;
+       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#ISO4
 :ISO4 rdf:type owl:Class ;
-      rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+      rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+      rdfs:comment "Number of particles per milimiter bigger than 4 μm. Related to ISO 4406:1999 method for coding the level of contamination by solid particles."@en ;
+      rdfs:isDefinedBy : ;
+      rdfs:label "ISO4"@en ;
+      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#ISO6
 :ISO6 rdf:type owl:Class ;
-      rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+      rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+      rdfs:comment "Number of particles per milimiter bigger than 6 μm. Related to ISO 4406:1999 method for coding the level of contamination by solid particles."@en ;
+      rdfs:isDefinedBy : ;
+      rdfs:label "ISO6"@en ;
+      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#Indicator
 :Indicator rdf:type owl:Class ;
+           rdfs:comment "Something that shows what a situation is like."@en ;
            rdfs:isDefinedBy : ;
            rdfs:label "Indicador"@es ,
                       "Indicator"@en ;
@@ -352,6 +410,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#LubePump
 :LubePump rdf:type owl:Class ;
           rdfs:subClassOf :GearboxLubeSystem ;
+          rdfs:comment "Circulates the lubricant from the lube system."@en ;
           rdfs:isDefinedBy : ;
           rdfs:label "Bomba de Lubricación"@es ,
                      "Lube Pump"@en ;
@@ -362,6 +421,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#LubePumpMotor
 :LubePumpMotor rdf:type owl:Class ;
                rdfs:subClassOf :GearboxLubeSystem ;
+               rdfs:comment "It supplies motive power to the pump."@en ;
                rdfs:isDefinedBy : ;
                rdfs:label "Lube Pump Motor"@en ,
                           "Motor de Bomba de Lubricación"@es ;
@@ -375,6 +435,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
                            owl:onProperty :hasPart ;
                            owl:someValuesFrom :Gearbox
                          ] ;
+         rdfs:comment "A housing which contains the drive‑train and other elements on top of a horizontal axis wind turbine tower."@en ;
          rdfs:isDefinedBy : ;
          rdfs:label "Góndola"@es ,
                     "Nacelle"@en ;
@@ -382,27 +443,37 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
-###  https://w3id.org/wfont#OD
-:OD rdf:type owl:Class ;
-    rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
-
-
 ###  https://w3id.org/wfont#OilDegradation
 :OilDegradation rdf:type owl:Class ;
-                rdfs:subClassOf :Indicator ;
+                rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+                rdfs:comment "State of the oil degradation level in the different stages of its useful life."@en ;
                 rdfs:isDefinedBy : ;
                 rdfs:label "Oil Degradation"@en ;
                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
+###  https://w3id.org/wfont#OilDegradationLevel
+:OilDegradationLevel rdf:type owl:Class ;
+                     rdfs:subClassOf :Indicator ;
+                     rdfs:comment "Indicates the warning and alarm level for oil degradation in the oil, it is calculated using OD parameter of the sensor."@en ;
+                     rdfs:isDefinedBy : ;
+                     rdfs:label "Oil Degradation Level"@en ;
+                     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
 ###  https://w3id.org/wfont#Particles
 :Particles rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+           rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+           rdfs:comment "Number of particles per milimiter."@en ;
+           rdfs:isDefinedBy : ;
+           rdfs:label "Particles"@en ;
+           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#PlanetBearing
 :PlanetBearing rdf:type owl:Class ;
                rdfs:subClassOf :GearboxBearing ;
+               rdfs:comment "Consists of the bearing mounted in the planet gear."@en ;
                rdfs:isDefinedBy : ;
                rdfs:label "Planet Bearing"@en ,
                           "Rodamiento Planetario"@es ;
@@ -413,6 +484,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#PlanetGear
 :PlanetGear rdf:type owl:Class ;
             rdfs:subClassOf :GearboxGears ;
+            rdfs:comment "It is the gear that rotates around the sun gear."@en ;
             rdfs:isDefinedBy : ;
             rdfs:label "Engranaje Planetario"@es ,
                        "Planet Gear"@en ;
@@ -423,6 +495,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#PrimaryFiltration
 :PrimaryFiltration rdf:type owl:Class ;
                    rdfs:subClassOf :GearboxLubeSystem ;
+                   rdfs:comment "First step of lube filtration system."@en ;
                    rdfs:isDefinedBy : ;
                    rdfs:label "Filtración Primaria"@es ,
                               "Primary Filtration"@en ;
@@ -433,6 +506,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#Radiator
 :Radiator rdf:type owl:Class ;
           rdfs:subClassOf :CoolingSystem ;
+          rdfs:comment "It is a heat exchanger use to transfer thermal energy from one medium to another."@en ;
           rdfs:isDefinedBy : ;
           rdfs:label "Radiador"@es ,
                      "Radiator"@en ;
@@ -443,6 +517,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#Reservoir
 :Reservoir rdf:type owl:Class ;
            rdfs:subClassOf :GearboxLubeSystem ;
+           rdfs:comment "Lube compartment or tank that collect oil."@en ;
            rdfs:isDefinedBy : ;
            rdfs:label "Depósito"@es ,
                       "Reservoir"@en ;
@@ -453,6 +528,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#RingGear
 :RingGear rdf:type owl:Class ;
           rdfs:subClassOf :GearboxGears ;
+          rdfs:comment "An outer ring with inward-facing teeth that mesh with the planet gear or gears."@en ;
           rdfs:isDefinedBy : ;
           rdfs:label "Engranaje de Anillo"@es ,
                      "Ring Gear"@en ;
@@ -463,6 +539,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#SecondaryFiltration
 :SecondaryFiltration rdf:type owl:Class ;
                      rdfs:subClassOf :GearboxLubeSystem ;
+                     rdfs:comment "Second step of lube filtration system."@en ;
                      rdfs:isDefinedBy : ;
                      rdfs:label "Filtración Secundaria"@es ,
                                 "Secondary Filtration"@en ;
@@ -478,6 +555,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
                           owl:onProperty <https://w3id.org/eep#forQuality> ;
                           owl:someValuesFrom <https://w3id.org/affectedBy#Quality>
                         ] ;
+        rdfs:comment "Device that converts a physical pehnomenon into a measurable data. In lube systems, collects information of the oil wear or operation."@en ;
         rdfs:isDefinedBy : ;
         rdfs:label "Sensor"@en ,
                    "Sensor"@es ;
@@ -485,17 +563,19 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
-###  https://w3id.org/wfont#SevereWear
-:SevereWear rdf:type owl:Class ;
-            rdfs:subClassOf :Indicator ;
-            rdfs:isDefinedBy : ;
-            rdfs:label "Severe Wear"@en ;
-            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+###  https://w3id.org/wfont#SevereWearLevel
+:SevereWearLevel rdf:type owl:Class ;
+                 rdfs:subClassOf :Indicator ;
+                 rdfs:comment "Indicates the warning and alarm level for having big particles in the oil, it is calculated using BigParticles parameter of the sensor."@en ;
+                 rdfs:isDefinedBy : ;
+                 rdfs:label "Severe Wear Level"@en ;
+                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#ShaftBearing
 :ShaftBearing rdf:type owl:Class ;
               rdfs:subClassOf :GearboxBearing ;
+              rdfs:comment "Bearing which supports the intermediate shafting."@en ;
               rdfs:isDefinedBy : ;
               rdfs:label "Rodamiento de Eje"@es ,
                          "Shaft Bearing"@en ;
@@ -505,12 +585,17 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 
 ###  https://w3id.org/wfont#Sliding
 :Sliding rdf:type owl:Class ;
-         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> .
+         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+         rdfs:comment "Number of particles related to slidding wear per milimiter."@en ;
+         rdfs:isDefinedBy : ;
+         rdfs:label "Sliding"@en ;
+         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#SpurGear
 :SpurGear rdf:type owl:Class ;
           rdfs:subClassOf :GearboxGears ;
+          rdfs:comment "It has straight teeth and are parallel to the axis of the wheel."@en ;
           rdfs:isDefinedBy : ;
           rdfs:label "Engranaje Recto"@es ,
                      "Spur Gear"@en ;
@@ -521,6 +606,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
 ###  https://w3id.org/wfont#SunGear
 :SunGear rdf:type owl:Class ;
          rdfs:subClassOf :GearboxGears ;
+         rdfs:comment "It is the central gear."@en ;
          rdfs:isDefinedBy : ;
          rdfs:label "Engranaje Solar"@es ,
                     "Sun Gear"@en ;
@@ -528,12 +614,22 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
-###  https://w3id.org/wfont#UnclassifiedWear
-:UnclassifiedWear rdf:type owl:Class ;
-                  rdfs:subClassOf :Indicator ;
-                  rdfs:isDefinedBy : ;
-                  rdfs:label "Unclassified Wear"@en ;
-                  <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+###  https://w3id.org/wfont#UnclassifiedWearLevel
+:UnclassifiedWearLevel rdf:type owl:Class ;
+                       rdfs:subClassOf :Indicator ;
+                       rdfs:comment "Indicates the warning and alarm level for having unclassified particles in the oil, it is calculated using Unknown parameter of the sensor."@en ;
+                       rdfs:isDefinedBy : ;
+                       rdfs:label "Unclassified Wear Level"@en ;
+                       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
+
+
+###  https://w3id.org/wfont#Unknown
+:Unknown rdf:type owl:Class ;
+         rdfs:subClassOf <https://w3id.org/affectedBy#Quality> ;
+         rdfs:comment "Number of particles related to unknown particles per milimiter."@en ;
+         rdfs:isDefinedBy : ;
+         rdfs:label "Unknown"@en ;
+         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"^^xsd:string .
 
 
 ###  https://w3id.org/wfont#WindFarm
@@ -542,6 +638,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
                             owl:onProperty :hasPart ;
                             owl:someValuesFrom :WindTurbine
                           ] ;
+          rdfs:comment "A group of wind turbine generator jointly operated."@en ;
           rdfs:isDefinedBy : ;
           rdfs:label "Parque Eólico"@es ,
                      "Wind Farm"@en ;
@@ -555,6 +652,7 @@ Francisco Javier Diez <mailto:francisco.diez>"""@tekniker.es> ;
                                owl:onProperty :hasPart ;
                                owl:someValuesFrom :Nacelle
                              ] ;
+             rdfs:comment "A rotating machinery in which the kinetic wind energy is transformed into another form of energy."@en ;
              rdfs:isDefinedBy : ;
              rdfs:label "Aerogenerador"@es ,
                         "Wind Turbine"@en ;

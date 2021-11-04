@@ -1,14 +1,15 @@
 <https://w3id.org/wfont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/wfont> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/eep> .
 <https://w3id.org/wfont> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by-nc/4.0/> .
-<https://w3id.org/wfont> <http://purl.org/dc/terms/contributor> "Gonzalo Gil <mailto:gonzalo.gil@tekniker.es>\nFrancisco Javier Diez <mailto:francisco.diez>"@tekniker.es> .
+<https://w3id.org/wfont> <http://purl.org/dc/terms/contributor> "Francisco Javier Diez <mailto:francisco.diez>\nGonzalo Gil <mailto:gonzalo.gil@tekniker.es>\nEgoitz Konde <mailto:egoitz.konde@tekniker.es>"@tekniker.es> .
 <https://w3id.org/wfont> <http://purl.org/dc/terms/created> "2021-10-05" .
 <https://w3id.org/wfont> <http://purl.org/dc/terms/creator> "Iker Esnaola-Gonzalez <mailto:iker.esnaola@tekniker.es>"@tekniker.es> .
 <https://w3id.org/wfont> <http://purl.org/dc/terms/description> "The Wind Farm Ontology (wfont) describes wind farms and their components. It is inspired by the SANDIA Report SAND2009-1171 and DAEKIN project outcomes. It reuses the AffectedBy and EEP (Execution-Executor-Procedure) ontology design patterns to discover sensors or actuators that observe or act on a given quality or feature of interest."@en .
+<https://w3id.org/wfont> <http://purl.org/dc/terms/modified> "2021-11-04" .
 <https://w3id.org/wfont> <http://purl.org/dc/terms/title> "Wind Farm Ontology (wfont)" .
 <https://w3id.org/wfont> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wfont" .
 <https://w3id.org/wfont> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/wfont#> .
-<https://w3id.org/wfont> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/wfont> <http://www.w3.org/2002/07/owl#versionInfo> "0.2"@tekniker.es> .
 # 
 # 
 # #################################################################
@@ -85,42 +86,58 @@
 # https://w3id.org/eep#Executor
 <https://w3id.org/eep#Executor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
-# https://w3id.org/wfont#AbrasiveWear
-<https://w3id.org/wfont#AbrasiveWear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/wfont#AbrasiveWear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
-<https://w3id.org/wfont#AbrasiveWear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
-<https://w3id.org/wfont#AbrasiveWear> <http://www.w3.org/2000/01/rdf-schema#label> "Abrasive Wear"@en .
-<https://w3id.org/wfont#AbrasiveWear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# https://w3id.org/wfont#AbrasiveWearLevel
+<https://w3id.org/wfont#AbrasiveWearLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#AbrasiveWearLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#AbrasiveWearLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the warning and alarm level for having abrasive particles in the oil, it is calculated using Cutting parameter of the sensor."@en .
+<https://w3id.org/wfont#AbrasiveWearLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#AbrasiveWearLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Abrasive Wear Level"@en .
+<https://w3id.org/wfont#AbrasiveWearLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
-# https://w3id.org/wfont#AdhesiveWear
-<https://w3id.org/wfont#AdhesiveWear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/wfont#AdhesiveWear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
-<https://w3id.org/wfont#AdhesiveWear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
-<https://w3id.org/wfont#AdhesiveWear> <http://www.w3.org/2000/01/rdf-schema#label> "Adhesive Wear"@en .
-<https://w3id.org/wfont#AdhesiveWear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# https://w3id.org/wfont#AdhesiveWearLevel
+<https://w3id.org/wfont#AdhesiveWearLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#AdhesiveWearLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#AdhesiveWearLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the warning and alarm level for having sliding particles in the oil, it is calculated using Sliding parameter of the sensor."@en .
+<https://w3id.org/wfont#AdhesiveWearLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#AdhesiveWearLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Adhesive Wear Level"@en .
+<https://w3id.org/wfont#AdhesiveWearLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
-# https://w3id.org/wfont#AirContent
-<https://w3id.org/wfont#AirContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/wfont#AirContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
-<https://w3id.org/wfont#AirContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
-<https://w3id.org/wfont#AirContent> <http://www.w3.org/2000/01/rdf-schema#label> "Air Content"@en .
-<https://w3id.org/wfont#AirContent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# https://w3id.org/wfont#AirContentLevel
+<https://w3id.org/wfont#AirContentLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#AirContentLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#AirContentLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the warning and alarm level for having bubbles in the oil, it is calculated using Bubbles parameter of the sensor."@en .
+<https://w3id.org/wfont#AirContentLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#AirContentLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Air Content Level"@en .
+<https://w3id.org/wfont#AirContentLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#BigBubbles
 <https://w3id.org/wfont#BigBubbles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#BigBubbles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Bubbles> .
+<https://w3id.org/wfont#BigBubbles> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of bubbles per milimiter bigger than 21 \u03BCm."@en .
+<https://w3id.org/wfont#BigBubbles> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#BigBubbles> <http://www.w3.org/2000/01/rdf-schema#label> "Big Bubbles"@en .
+<https://w3id.org/wfont#BigBubbles> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#BigParticles
 <https://w3id.org/wfont#BigParticles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#BigParticles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Particles> .
+<https://w3id.org/wfont#BigParticles> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of particles per milimiter bigger than 21 \u03BCm."@en .
+<https://w3id.org/wfont#BigParticles> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#BigParticles> <http://www.w3.org/2000/01/rdf-schema#label> "Big Particles"@en .
+<https://w3id.org/wfont#BigParticles> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#Bubbles
 <https://w3id.org/wfont#Bubbles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#Bubbles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#Bubbles> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of bubbles per milimiter."@en .
+<https://w3id.org/wfont#Bubbles> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Bubbles> <http://www.w3.org/2000/01/rdf-schema#label> "Bubbles"@en .
+<https://w3id.org/wfont#Bubbles> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#Bushing
 <https://w3id.org/wfont#Bushing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#Bushing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxTorqueArmSystem> .
+<https://w3id.org/wfont#Bushing> <http://www.w3.org/2000/01/rdf-schema#comment> "A mechanical device used to reduce vibrations."@en .
 <https://w3id.org/wfont#Bushing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#Bushing> <http://www.w3.org/2000/01/rdf-schema#label> "Buje"@es .
 <https://w3id.org/wfont#Bushing> <http://www.w3.org/2000/01/rdf-schema#label> "Bushing"@en .
@@ -130,6 +147,7 @@
 # https://w3id.org/wfont#CarrierBearing
 <https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxBearing> .
+<https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2000/01/rdf-schema#comment> "It is the bearing that support the carrier. The carrier holds the planet gears at different radio from the sun gear centerline."@en .
 <https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Carrier Bearing"@en .
 <https://w3id.org/wfont#CarrierBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Rodamiento Portador"@es .
@@ -139,6 +157,7 @@
 # https://w3id.org/wfont#CleanlinessLevel
 <https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the warning and alarm level for having particles in the oil, it is calculated using ISO4, ISO6 and ISO14 parameter of the sensor."@en .
 <https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Cleanliness Level"@en .
 <https://w3id.org/wfont#CleanlinessLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
@@ -146,6 +165,7 @@
 # https://w3id.org/wfont#CoolantPump
 <https://w3id.org/wfont#CoolantPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#CoolingSystem> .
+<https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2000/01/rdf-schema#comment> "Circulates the liquid from the cooling system."@en .
 <https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2000/01/rdf-schema#label> "Bomba de Refrigerante"@es .
 <https://w3id.org/wfont#CoolantPump> <http://www.w3.org/2000/01/rdf-schema#label> "Coolant Pump"@en .
@@ -155,6 +175,7 @@
 # https://w3id.org/wfont#CoolingSystem
 <https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Reduces the temperature of the oil from the lubricating system."@en .
 <https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Cooling System"@en .
 <https://w3id.org/wfont#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Sistema de Refrigeraci\u00F3n"@es .
@@ -164,28 +185,42 @@
 # https://w3id.org/wfont#Cutting
 <https://w3id.org/wfont#Cutting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#Cutting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#Cutting> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of particles related to cutting wear per milimiter."@en .
+<https://w3id.org/wfont#Cutting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Cutting> <http://www.w3.org/2000/01/rdf-schema#label> "Cutting"@en .
+<https://w3id.org/wfont#Cutting> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#Fatigue
 <https://w3id.org/wfont#Fatigue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#Fatigue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#Fatigue> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of particles related to fatigue wear per milimiter."@en .
+<https://w3id.org/wfont#Fatigue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Fatigue> <http://www.w3.org/2000/01/rdf-schema#label> "Fatigue"@en .
+<https://w3id.org/wfont#Fatigue> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
-# https://w3id.org/wfont#FatigueWear
-<https://w3id.org/wfont#FatigueWear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/wfont#FatigueWear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
-<https://w3id.org/wfont#FatigueWear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
-<https://w3id.org/wfont#FatigueWear> <http://www.w3.org/2000/01/rdf-schema#label> "Fatigue Wear"@en .
-<https://w3id.org/wfont#FatigueWear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# https://w3id.org/wfont#FatigueWearLevel
+<https://w3id.org/wfont#FatigueWearLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#FatigueWearLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#FatigueWearLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the warning and alarm level for having fatigue particles in the oil, it is calculated using Fatigue parameter of the sensor."@en .
+<https://w3id.org/wfont#FatigueWearLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#FatigueWearLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Fatigue Wear Level"@en .
+<https://w3id.org/wfont#FatigueWearLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#Fiber
 <https://w3id.org/wfont#Fiber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#Fiber> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#Fiber> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of particles related to fiber particles per milimiter."@en .
+<https://w3id.org/wfont#Fiber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Fiber> <http://www.w3.org/2000/01/rdf-schema#label> "Fiber"@en .
+<https://w3id.org/wfont#Fiber> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
-# https://w3id.org/wfont#FibreContamination
-<https://w3id.org/wfont#FibreContamination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/wfont#FibreContamination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
-<https://w3id.org/wfont#FibreContamination> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
-<https://w3id.org/wfont#FibreContamination> <http://www.w3.org/2000/01/rdf-schema#label> "Fibre Contamination"@en .
-<https://w3id.org/wfont#FibreContamination> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# https://w3id.org/wfont#FibreContaminationLevel
+<https://w3id.org/wfont#FibreContaminationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#FibreContaminationLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#FibreContaminationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the warning and alarm level for having fibre particles in the oil, it is calculated using Fibre parameter of the sensor."@en .
+<https://w3id.org/wfont#FibreContaminationLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#FibreContaminationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Fibre Contamination Level"@en .
+<https://w3id.org/wfont#FibreContaminationLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#Gearbox
 <https://w3id.org/wfont#Gearbox> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -216,6 +251,7 @@ _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
 _:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#GearboxTorqueArmSystem> .
+<https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of gears with its casing, aimed at increasing or reducing speed."@en .
 <https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#label> "Gearbox"@en .
 <https://w3id.org/wfont#Gearbox> <http://www.w3.org/2000/01/rdf-schema#label> "Multiplicadora"@es .
@@ -225,6 +261,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # https://w3id.org/wfont#GearboxBearing
 <https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxComponent> .
+<https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2000/01/rdf-schema#comment> "Consists of rings with raceway (inner ring and outer ring), rolling elements (either balls or rollers) and cage. The cage separates the rolling elements at regular intervals, holds them in place within the inner and outer raceways, and allows them to rotate freely."@en .
 <https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Bearing"@en .
 <https://w3id.org/wfont#GearboxBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Rodamiento"@es .
@@ -233,6 +270,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # 
 # https://w3id.org/wfont#GearboxComponent
 <https://w3id.org/wfont#GearboxComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#GearboxComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Constituting part or element of a gearbox."@en .
 <https://w3id.org/wfont#GearboxComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#GearboxComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componente de Multiplicadora"@es .
 <https://w3id.org/wfont#GearboxComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Gearbox Component"@en .
@@ -241,6 +279,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # https://w3id.org/wfont#GearboxGears
 <https://w3id.org/wfont#GearboxGears> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxComponent> .
+<https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a rotating circular machine part having teeth which mesh with another (compatible) toothed part to transmit (convert) torque and speed."@en .
 <https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2000/01/rdf-schema#label> "Engranaje"@es .
 <https://w3id.org/wfont#GearboxGears> <http://www.w3.org/2000/01/rdf-schema#label> "Gears"@en .
@@ -250,6 +289,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # https://w3id.org/wfont#GearboxHousing
 <https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxComponent> .
+<https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2000/01/rdf-schema#comment> "A protective casing providing a reservoir of oil or grease for the gearing."@en .
 <https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2000/01/rdf-schema#label> "Alojamiento"@es .
 <https://w3id.org/wfont#GearboxHousing> <http://www.w3.org/2000/01/rdf-schema#label> "Housing"@en .
@@ -259,6 +299,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # https://w3id.org/wfont#GearboxLubeSystem
 <https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxComponent> .
+<https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "It controls the shifting process of the transmission, lubrication of the transmission parts to prevent frictional damage, and cooling of the transmission.\u00A0"@en .
 <https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Lube System"@en .
 <https://w3id.org/wfont#GearboxLubeSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Sistema de Lubricaci\u00F3n"@es .
@@ -268,6 +309,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # https://w3id.org/wfont#GearboxTorqueArmSystem
 <https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxComponent> .
+<https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "It is\u00A0a long suspension arm that attaches between the housing and the Nacelle. Its primary job is to control axle housing rotation."@en .
 <https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Sistema de Brazo de Torque"@es .
 <https://w3id.org/wfont#GearboxTorqueArmSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Torque Arm System"@en .
@@ -277,6 +319,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # https://w3id.org/wfont#HollowShaft
 <https://w3id.org/wfont#HollowShaft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2000/01/rdf-schema#comment> "The ouput shaft of the gearbox witch has empty space inside."@en .
 <https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2000/01/rdf-schema#label> "Eje hueco"@es .
 <https://w3id.org/wfont#HollowShaft> <http://www.w3.org/2000/01/rdf-schema#label> "Hollow Shaft"@en .
@@ -286,6 +329,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # https://w3id.org/wfont#Hose-Fitting
 <https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2000/01/rdf-schema#comment> "Flexible tube and part attached to it where lube is carried."@en .
 <https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2000/01/rdf-schema#label> "Hose/Fitting"@en .
 <https://w3id.org/wfont#Hose-Fitting> <http://www.w3.org/2000/01/rdf-schema#label> "Manguera"@es .
@@ -295,17 +339,30 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # https://w3id.org/wfont#ISO14
 <https://w3id.org/wfont#ISO14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#ISO14> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#ISO14> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of particles per milimiter bigger than 14 \u03BCm. Related to ISO 4406:1999 method for coding the level of contamination by solid particles."@en .
+<https://w3id.org/wfont#ISO14> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#ISO14> <http://www.w3.org/2000/01/rdf-schema#label> "ISO14"@en .
+<https://w3id.org/wfont#ISO14> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#ISO4
 <https://w3id.org/wfont#ISO4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#ISO4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#ISO4> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of particles per milimiter bigger than 4 \u03BCm. Related to ISO 4406:1999 method for coding the level of contamination by solid particles."@en .
+<https://w3id.org/wfont#ISO4> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#ISO4> <http://www.w3.org/2000/01/rdf-schema#label> "ISO4"@en .
+<https://w3id.org/wfont#ISO4> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#ISO6
 <https://w3id.org/wfont#ISO6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#ISO6> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#ISO6> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of particles per milimiter bigger than 6 \u03BCm. Related to ISO 4406:1999 method for coding the level of contamination by solid particles."@en .
+<https://w3id.org/wfont#ISO6> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#ISO6> <http://www.w3.org/2000/01/rdf-schema#label> "ISO6"@en .
+<https://w3id.org/wfont#ISO6> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#Indicator
 <https://w3id.org/wfont#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Indicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Something that shows what a situation is like."@en .
 <https://w3id.org/wfont#Indicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#Indicator> <http://www.w3.org/2000/01/rdf-schema#label> "Indicador"@es .
 <https://w3id.org/wfont#Indicator> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator"@en .
@@ -314,6 +371,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # https://w3id.org/wfont#LubePump
 <https://w3id.org/wfont#LubePump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#LubePump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#LubePump> <http://www.w3.org/2000/01/rdf-schema#comment> "Circulates the lubricant from the lube system."@en .
 <https://w3id.org/wfont#LubePump> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#LubePump> <http://www.w3.org/2000/01/rdf-schema#label> "Bomba de Lubricaci\u00F3n"@es .
 <https://w3id.org/wfont#LubePump> <http://www.w3.org/2000/01/rdf-schema#label> "Lube Pump"@en .
@@ -323,6 +381,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 # https://w3id.org/wfont#LubePumpMotor
 <https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2000/01/rdf-schema#comment> "It supplies motive power to the pump."@en .
 <https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2000/01/rdf-schema#label> "Lube Pump Motor"@en .
 <https://w3id.org/wfont#LubePumpMotor> <http://www.w3.org/2000/01/rdf-schema#label> "Motor de Bomba de Lubricaci\u00F3n"@es .
@@ -335,30 +394,41 @@ _:genid6 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/wfont#Gearbox
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
 _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#Gearbox> .
+<https://w3id.org/wfont#Nacelle> <http://www.w3.org/2000/01/rdf-schema#comment> "A housing which contains the drive\u2011train and other elements on top of a horizontal axis wind turbine tower."@en .
 <https://w3id.org/wfont#Nacelle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#Nacelle> <http://www.w3.org/2000/01/rdf-schema#label> "G\u00F3ndola"@es .
 <https://w3id.org/wfont#Nacelle> <http://www.w3.org/2000/01/rdf-schema#label> "Nacelle"@en .
 <https://w3id.org/wfont#Nacelle> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
 <https://w3id.org/wfont#Nacelle> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
-# https://w3id.org/wfont#OD
-<https://w3id.org/wfont#OD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/wfont#OD> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
-# 
 # https://w3id.org/wfont#OilDegradation
 <https://w3id.org/wfont#OilDegradation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/wfont#OilDegradation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#OilDegradation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#OilDegradation> <http://www.w3.org/2000/01/rdf-schema#comment> "State of the oil degradation level in the different stages of its useful life."@en .
 <https://w3id.org/wfont#OilDegradation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#OilDegradation> <http://www.w3.org/2000/01/rdf-schema#label> "Oil Degradation"@en .
 <https://w3id.org/wfont#OilDegradation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
+# https://w3id.org/wfont#OilDegradationLevel
+<https://w3id.org/wfont#OilDegradationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#OilDegradationLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#OilDegradationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the warning and alarm level for oil degradation in the oil, it is calculated using OD parameter of the sensor."@en .
+<https://w3id.org/wfont#OilDegradationLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#OilDegradationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Oil Degradation Level"@en .
+<https://w3id.org/wfont#OilDegradationLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
 # https://w3id.org/wfont#Particles
 <https://w3id.org/wfont#Particles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#Particles> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#Particles> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of particles per milimiter."@en .
+<https://w3id.org/wfont#Particles> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Particles> <http://www.w3.org/2000/01/rdf-schema#label> "Particles"@en .
+<https://w3id.org/wfont#Particles> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#PlanetBearing
 <https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxBearing> .
+<https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2000/01/rdf-schema#comment> "Consists of the bearing mounted in the planet gear."@en .
 <https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Planet Bearing"@en .
 <https://w3id.org/wfont#PlanetBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Rodamiento Planetario"@es .
@@ -368,6 +438,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#
 # https://w3id.org/wfont#PlanetGear
 <https://w3id.org/wfont#PlanetGear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2000/01/rdf-schema#comment> "It is the gear that rotates around the sun gear."@en .
 <https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2000/01/rdf-schema#label> "Engranaje Planetario"@es .
 <https://w3id.org/wfont#PlanetGear> <http://www.w3.org/2000/01/rdf-schema#label> "Planet Gear"@en .
@@ -377,6 +448,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#
 # https://w3id.org/wfont#PrimaryFiltration
 <https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2000/01/rdf-schema#comment> "First step of lube filtration system."@en .
 <https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2000/01/rdf-schema#label> "Filtraci\u00F3n Primaria"@es .
 <https://w3id.org/wfont#PrimaryFiltration> <http://www.w3.org/2000/01/rdf-schema#label> "Primary Filtration"@en .
@@ -386,6 +458,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#
 # https://w3id.org/wfont#Radiator
 <https://w3id.org/wfont#Radiator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#Radiator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#CoolingSystem> .
+<https://w3id.org/wfont#Radiator> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a heat exchanger use to transfer thermal energy from one medium to another."@en .
 <https://w3id.org/wfont#Radiator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#Radiator> <http://www.w3.org/2000/01/rdf-schema#label> "Radiador"@es .
 <https://w3id.org/wfont#Radiator> <http://www.w3.org/2000/01/rdf-schema#label> "Radiator"@en .
@@ -395,6 +468,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#
 # https://w3id.org/wfont#Reservoir
 <https://w3id.org/wfont#Reservoir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#Reservoir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#Reservoir> <http://www.w3.org/2000/01/rdf-schema#comment> "Lube compartment or tank that collect oil."@en .
 <https://w3id.org/wfont#Reservoir> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#Reservoir> <http://www.w3.org/2000/01/rdf-schema#label> "Dep\u00F3sito"@es .
 <https://w3id.org/wfont#Reservoir> <http://www.w3.org/2000/01/rdf-schema#label> "Reservoir"@en .
@@ -404,6 +478,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#
 # https://w3id.org/wfont#RingGear
 <https://w3id.org/wfont#RingGear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#RingGear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#RingGear> <http://www.w3.org/2000/01/rdf-schema#comment> "An outer ring with inward-facing teeth that mesh with the planet gear or gears."@en .
 <https://w3id.org/wfont#RingGear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#RingGear> <http://www.w3.org/2000/01/rdf-schema#label> "Engranaje de Anillo"@es .
 <https://w3id.org/wfont#RingGear> <http://www.w3.org/2000/01/rdf-schema#label> "Ring Gear"@en .
@@ -413,6 +488,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#
 # https://w3id.org/wfont#SecondaryFiltration
 <https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxLubeSystem> .
+<https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2000/01/rdf-schema#comment> "Second step of lube filtration system."@en .
 <https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2000/01/rdf-schema#label> "Filtraci\u00F3n Secundaria"@es .
 <https://w3id.org/wfont#SecondaryFiltration> <http://www.w3.org/2000/01/rdf-schema#label> "Secondary Filtration"@en .
@@ -427,22 +503,25 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/eep#forQuality> .
 _:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Device that converts a physical pehnomenon into a measurable data. In lube systems, collects information of the oil wear or operation."@en .
 <https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@en .
 <https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor"@es .
 <https://w3id.org/wfont#Sensor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
 <https://w3id.org/wfont#Sensor> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
-# https://w3id.org/wfont#SevereWear
-<https://w3id.org/wfont#SevereWear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/wfont#SevereWear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
-<https://w3id.org/wfont#SevereWear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
-<https://w3id.org/wfont#SevereWear> <http://www.w3.org/2000/01/rdf-schema#label> "Severe Wear"@en .
-<https://w3id.org/wfont#SevereWear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# https://w3id.org/wfont#SevereWearLevel
+<https://w3id.org/wfont#SevereWearLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#SevereWearLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#SevereWearLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the warning and alarm level for having big particles in the oil, it is calculated using BigParticles parameter of the sensor."@en .
+<https://w3id.org/wfont#SevereWearLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#SevereWearLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Severe Wear Level"@en .
+<https://w3id.org/wfont#SevereWearLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#ShaftBearing
 <https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxBearing> .
+<https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2000/01/rdf-schema#comment> "Bearing which supports the intermediate shafting."@en .
 <https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Rodamiento de Eje"@es .
 <https://w3id.org/wfont#ShaftBearing> <http://www.w3.org/2000/01/rdf-schema#label> "Shaft Bearing"@en .
@@ -452,10 +531,15 @@ _:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/affect
 # https://w3id.org/wfont#Sliding
 <https://w3id.org/wfont#Sliding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#Sliding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#Sliding> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of particles related to slidding wear per milimiter."@en .
+<https://w3id.org/wfont#Sliding> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Sliding> <http://www.w3.org/2000/01/rdf-schema#label> "Sliding"@en .
+<https://w3id.org/wfont#Sliding> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#SpurGear
 <https://w3id.org/wfont#SpurGear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#SpurGear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#SpurGear> <http://www.w3.org/2000/01/rdf-schema#comment> "It has straight teeth and are parallel to the axis of the wheel."@en .
 <https://w3id.org/wfont#SpurGear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#SpurGear> <http://www.w3.org/2000/01/rdf-schema#label> "Engranaje Recto"@es .
 <https://w3id.org/wfont#SpurGear> <http://www.w3.org/2000/01/rdf-schema#label> "Spur Gear"@en .
@@ -465,18 +549,28 @@ _:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/affect
 # https://w3id.org/wfont#SunGear
 <https://w3id.org/wfont#SunGear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#GearboxGears> .
+<https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#comment> "It is the central gear."@en .
 <https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#label> "Engranaje Solar"@es .
 <https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#label> "Sun Gear"@en .
 <https://w3id.org/wfont#SunGear> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "SAND2009-1171 Report - Appendix A: Taxonomy" .
 <https://w3id.org/wfont#SunGear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
-# https://w3id.org/wfont#UnclassifiedWear
-<https://w3id.org/wfont#UnclassifiedWear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/wfont#UnclassifiedWear> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
-<https://w3id.org/wfont#UnclassifiedWear> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
-<https://w3id.org/wfont#UnclassifiedWear> <http://www.w3.org/2000/01/rdf-schema#label> "Unclassified Wear"@en .
-<https://w3id.org/wfont#UnclassifiedWear> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# https://w3id.org/wfont#UnclassifiedWearLevel
+<https://w3id.org/wfont#UnclassifiedWearLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#UnclassifiedWearLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/wfont#Indicator> .
+<https://w3id.org/wfont#UnclassifiedWearLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the warning and alarm level for having unclassified particles in the oil, it is calculated using Unknown parameter of the sensor."@en .
+<https://w3id.org/wfont#UnclassifiedWearLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#UnclassifiedWearLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Unclassified Wear Level"@en .
+<https://w3id.org/wfont#UnclassifiedWearLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+# 
+# https://w3id.org/wfont#Unknown
+<https://w3id.org/wfont#Unknown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/wfont#Unknown> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/affectedBy#Quality> .
+<https://w3id.org/wfont#Unknown> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of particles related to unknown particles per milimiter."@en .
+<https://w3id.org/wfont#Unknown> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
+<https://w3id.org/wfont#Unknown> <http://www.w3.org/2000/01/rdf-schema#label> "Unknown"@en .
+<https://w3id.org/wfont#Unknown> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
 # 
 # https://w3id.org/wfont#WindFarm
 <https://w3id.org/wfont#WindFarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -484,6 +578,7 @@ _:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/affect
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
 _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#WindTurbine> .
+<https://w3id.org/wfont#WindFarm> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of wind turbine generator jointly operated."@en .
 <https://w3id.org/wfont#WindFarm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#WindFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Parque E\u00F3lico"@es .
 <https://w3id.org/wfont#WindFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Wind Farm"@en .
@@ -496,6 +591,7 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/wfont#hasPart> .
 _:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/wfont#Nacelle> .
+<https://w3id.org/wfont#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#comment> "A rotating machinery in which the kinetic wind energy is transformed into another form of energy."@en .
 <https://w3id.org/wfont#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/wfont#> .
 <https://w3id.org/wfont#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#label> "Aerogenerador"@es .
 <https://w3id.org/wfont#WindTurbine> <http://www.w3.org/2000/01/rdf-schema#label> "Wind Turbine"@en .
