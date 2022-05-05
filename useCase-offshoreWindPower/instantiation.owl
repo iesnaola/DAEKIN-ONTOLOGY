@@ -1,0 +1,216 @@
+@prefix : <https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY#> .
+@prefix ns: <http://creativecommons.org/ns#> .
+@prefix eep: <https://w3id.org/eep#> .
+@prefix ns1: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix wfont: <https://w3id.org/wfont#> .
+@prefix cpannotationschema: <http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#> .
+@base <https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY> .
+
+<https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/eep#forQuality
+eep:forQuality rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/idsa/core/language
+<https://w3id.org/idsa/core/language> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/idsa/core/offeredResource
+<https://w3id.org/idsa/core/offeredResource> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/idsa/core/publisher
+<https://w3id.org/idsa/core/publisher> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/idsa/core/resourcePart
+<https://w3id.org/idsa/core/resourcePart> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/wfont#hasIndicator
+wfont:hasIndicator rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/wfont#hasPart
+wfont:hasPart rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf <https://w3id.org/idsa/core/resourcePart> .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:DatatypeProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/idsa/core/customLicense
+<https://w3id.org/idsa/core/customLicense> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/idsa/core/description
+<https://w3id.org/idsa/core/description> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/idsa/core/keyword
+<https://w3id.org/idsa/core/keyword> rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/idsa/core/title
+<https://w3id.org/idsa/core/title> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing owl:equivalentClass <https://w3id.org/idsa/core/Resource> ;
+          rdfs:subClassOf <https://w3id.org/idsa/core/Resource> .
+
+
+###  https://w3id.org/idsa/core/Resource
+<https://w3id.org/idsa/core/Resource> rdf:type owl:Class .
+
+
+###  https://w3id.org/wfont#Fatigue
+wfont:Fatigue rdf:type owl:Class .
+
+
+###  https://w3id.org/wfont#FatigueWearLevel
+wfont:FatigueWearLevel rdf:type owl:Class .
+
+
+###  https://w3id.org/wfont#Gearbox
+wfont:Gearbox rdf:type owl:Class .
+
+
+###  https://w3id.org/wfont#GearboxLubeSystem
+wfont:GearboxLubeSystem rdf:type owl:Class .
+
+
+###  https://w3id.org/wfont#Sensor
+wfont:Sensor rdf:type owl:Class .
+
+
+###  https://w3id.org/wfont#WindFarm
+wfont:WindFarm rdf:type owl:Class .
+
+
+###  https://w3id.org/wfont#WindTurbine
+wfont:WindTurbine rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY#fatigue1
+:fatigue1 rdf:type owl:NamedIndividual ,
+                   wfont:Fatigue ;
+          <https://w3id.org/idsa/core/language> <https://w3id.org/idsa/code/EN> ;
+          <https://w3id.org/idsa/core/publisher> :publisherTEK ;
+          <https://w3id.org/idsa/core/customLicense> "https://creativecommons.org/licenses/by-nc/4.0/"^^xsd:anyURI ;
+          <https://w3id.org/idsa/core/keyword> "fatigue" ;
+          terms:description "fatigue1" ;
+          terms:title "fatigue1" .
+
+
+###  https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY#fatigueWear1
+:fatigueWear1 rdf:type owl:NamedIndividual ,
+                       wfont:FatigueWearLevel ;
+              <https://w3id.org/idsa/core/language> <https://w3id.org/idsa/code/EN> ;
+              <https://w3id.org/idsa/core/publisher> :publisherTEK ;
+              <https://w3id.org/idsa/core/customLicense> "https://creativecommons.org/licenses/by-nc/4.0/"^^xsd:anyURI ;
+              <https://w3id.org/idsa/core/keyword> "fatigueWear" ;
+              terms:description "fatigueWear1" ;
+              terms:title "fatigueWear1" .
+
+
+###  https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY#gearbox1
+:gearbox1 rdf:type owl:NamedIndividual ,
+                   wfont:Gearbox ;
+          <https://w3id.org/idsa/core/language> <https://w3id.org/idsa/code/EN> ;
+          <https://w3id.org/idsa/core/publisher> :publisherTEK ;
+          <https://w3id.org/idsa/core/resourcePart> :lubeSystem1 ;
+          <https://w3id.org/idsa/core/customLicense> "https://creativecommons.org/licenses/by-nc/4.0/"^^xsd:anyURI ;
+          <https://w3id.org/idsa/core/keyword> "gearbox" ;
+          terms:description "gearbox1" ;
+          terms:title "gearbox1" .
+
+
+###  https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY#lubeSystem1
+:lubeSystem1 rdf:type owl:NamedIndividual ,
+                      wfont:GearboxLubeSystem ;
+             <https://w3id.org/idsa/core/language> <https://w3id.org/idsa/code/EN> ;
+             <https://w3id.org/idsa/core/publisher> :publisherTEK ;
+             <https://w3id.org/idsa/core/resourcePart> :sensor1 ;
+             <https://w3id.org/idsa/core/customLicense> "https://creativecommons.org/licenses/by-nc/4.0/"^^xsd:anyURI ;
+             <https://w3id.org/idsa/core/keyword> "lubeSystem" ;
+             terms:description "lubeSystem1" ;
+             terms:title "lubeSystem1" .
+
+
+###  https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY#publisherTEK
+:publisherTEK rdf:type owl:NamedIndividual .
+
+
+###  https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY#sensor1
+:sensor1 rdf:type owl:NamedIndividual ,
+                  wfont:Sensor ;
+         eep:forQuality :fatigue1 ;
+         <https://w3id.org/idsa/core/language> <https://w3id.org/idsa/code/EN> ;
+         <https://w3id.org/idsa/core/publisher> :publisherTEK ;
+         <https://w3id.org/idsa/core/resourcePart> :fatigueWear1 ;
+         wfont:hasIndicator :fatigueWear1 ;
+         <https://w3id.org/idsa/core/customLicense> "https://creativecommons.org/licenses/by-nc/4.0/"^^xsd:anyURI ;
+         <https://w3id.org/idsa/core/keyword> "sensor" ;
+         terms:description "sensor1" ;
+         terms:title "sensor1" .
+
+
+###  https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY#windFarm1
+:windFarm1 rdf:type owl:NamedIndividual ,
+                    wfont:WindFarm ;
+           <https://w3id.org/idsa/core/language> <https://w3id.org/idsa/code/EN> ;
+           <https://w3id.org/idsa/core/publisher> :publisherTEK ;
+           <https://w3id.org/idsa/core/resourcePart> :windTurbine1 ;
+           <https://w3id.org/idsa/core/customLicense> "https://creativecommons.org/licenses/by-nc/4.0/"^^xsd:anyURI ;
+           <https://w3id.org/idsa/core/keyword> "windFarm" ;
+           terms:description "windFarm1" ;
+           terms:title "windFarm1" .
+
+
+###  https://github.com/fundaciontekniker/DAEKIN-ONTOLOGY#windTurbine1
+:windTurbine1 rdf:type owl:NamedIndividual ,
+                       wfont:WindTurbine ;
+              <https://w3id.org/idsa/core/language> <https://w3id.org/idsa/code/EN> ;
+              <https://w3id.org/idsa/core/publisher> :publisherTEK ;
+              <https://w3id.org/idsa/core/resourcePart> :gearbox1 ;
+              <https://w3id.org/idsa/core/customLicense> "https://creativecommons.org/licenses/by-nc/4.0/"^^xsd:anyURI ;
+              <https://w3id.org/idsa/core/keyword> "windTurbine" ;
+              terms:description "windTurbine1" ;
+              terms:title "windTurbine1" .
+
+
+###  https://w3id.org/idsa/code/EN
+<https://w3id.org/idsa/code/EN> rdf:type owl:NamedIndividual .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
